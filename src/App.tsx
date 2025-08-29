@@ -1,11 +1,11 @@
-// import React from "react";
 import "./global.css";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { Container } from "./components/Container";
 import { Logo } from "./components/Logo";
 import { Menu } from "./components/Menu";
 import { CountDown } from "./components/CountDown";
-// import { TimerIcon } from "lucide-react";
+import { DefaultInput } from "./components/DefaultInput";
+import { Cycles } from "./components/Cycles";
 
 export function App() {
   return (
@@ -19,12 +19,30 @@ export function App() {
       <Container>
         <CountDown />
       </Container>
-      {/* <Heading>
-        Olá Mundo, pqpeofoipaofjapojefnaajdsnv
-        <button className="bg-amber-50">
-          <TimerIcon color="black" />
-        </button>
-      </Heading> */}
+      <Container>
+        <form className="flex flex-col items-center justify-center gap-9">
+          <div className="flex flex-col items-center justify-center gap-9 ">
+            <DefaultInput
+              id="myInput"
+              type="text"
+              labelText="Teste"
+              placeholder="Write something..."
+            />
+          </div>
+
+          <div className="flex flex-col items-center justify-center gap-9">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+
+          <div className="flex flex-col items-center justify-center gap-9">
+            <Cycles />
+          </div>
+
+          <div className="flex flex-col items-center justify-center gap-9">
+            <button>Enviar</button>
+          </div>
+        </form>
+      </Container>
     </ThemeProvider>
   );
 }
