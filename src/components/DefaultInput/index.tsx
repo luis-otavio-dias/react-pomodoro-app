@@ -10,7 +10,7 @@ export function DefaultInput({
   id,
   type,
   labelText,
-  ...rest
+  ...props
 }: DefaultInputProps) {
   return (
     <>
@@ -18,7 +18,7 @@ export function DefaultInput({
       <input
         id={id}
         type={type}
-        {...rest}
+        {...props}
         className={clsx([
           "bg-transparent",
           "text-center",
