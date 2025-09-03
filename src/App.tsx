@@ -8,26 +8,30 @@ import { DefaultInput } from "./components/DefaultInput";
 import { DefaultButton } from "./components/DefaultButton";
 import { Cycles } from "./components/Cycles";
 import { PlayCircleIcon } from "lucide-react";
+import { Footer } from "./components/Footer";
 
 export function App() {
   return (
-    <ThemeProvider defaultTheme="dark">
+    <ThemeProvider storageKey="storaged-theme">
       <Container>
         <Logo />
       </Container>
+
       <Container>
         <Menu />
       </Container>
+
       <Container>
         <CountDown />
       </Container>
+
       <Container>
         <form className="flex flex-col items-center justify-center gap-9">
           <div className="flex flex-col items-center justify-center gap-9 ">
             <DefaultInput
               id="myInput"
               type="text"
-              labelText="Teste"
+              labelText={"task"}
               placeholder="Write something..."
             />
           </div>
@@ -44,6 +48,10 @@ export function App() {
             <DefaultButton icon={<PlayCircleIcon />} color="primary" />
           </div>
         </form>
+      </Container>
+
+      <Container>
+        <Footer />
       </Container>
     </ThemeProvider>
   );
