@@ -13,7 +13,7 @@ export function Menu() {
   const nextThemeIcon = {
     dark: <SunIcon />,
     light: <MoonIcon />,
-    system: theme === "dark" ? <SunIcon /> : <MoonIcon />,
+    system: theme === "dark" ? <MoonIcon /> : <SunIcon />,
   };
 
   function handleThemeChange(
