@@ -5,7 +5,7 @@ import {
   SunIcon,
   MoonIcon,
 } from "lucide-react";
-import { useTheme } from "../ThemeProvider";
+import { useTheme } from "@/contexts/ThemeContext/useThemeContext";
 
 export function Menu() {
   const { theme, changeTheme } = useTheme();
